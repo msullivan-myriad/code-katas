@@ -1,41 +1,28 @@
-const arr = [1, 2, 3];
+import CTCIOneOne from "./ctci/ctci.1.1";
 
-const somethin = {
-    'value': 123,
-};
+class FetchKata {
 
-class Test {
-
-    constructor(name) {
-       this.name = name;
+    constructor() {
+       this.ctci = new CTCIOneOne;
     }
 
-    doSomething() {
-       return this.name;
-    }
+    returnQandA(chapter, problem) {
 
+        if (chapter === 1 && problem === 1) {
+            console.log(this.ctci.question());
+            return this.ctci.answer();
+        }
+
+        else {
+            return null;
+        }
+
+    }
 
 }
 
-const testin = new Test('A name here');
+const answers = new FetchKata();
 
-const variable =  testin.doSomething();
 
-console.log(variable);
-
-console.log(arr);
-console.log(somethin);
-
-console.log('Some changes here');
-
-console.log('More stuff here');
-
-console.log('Why is this not logging.......?');
-console.log('Why is this not logging.......?');
-console.log('Why is this not logging.......?');
-
-console.log('And some more stuff!');
-console.log('And some more stuff!');
-console.log('And some more stuff!');
-console.log('And some more stuff!');
-console.log('And some more stuff!');
+/** Run debugger so I can use facade in the console **/
+debugger;
